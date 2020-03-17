@@ -60,11 +60,13 @@ struct VampireCastle
     float bloodInLiters = 1000.4f;
     bool draculaDefeated;
     int yearsTilResurrection = 100;
+
     struct VampireHunter
     {
         bool hasMorningStar = true;
         unsigned int numUndeadSlain = 348;
     };
+    
     void curseVampireHunter( VampireHunter vampireHunter );
     VampireHunter simon;
 };
@@ -84,10 +86,12 @@ struct ScaryMansion
     bool savedBarry;
     bool savedRebecca;
     bool activatedSelfDestruct;
+
     struct Tyrant
     {
         void swingClaw(int selectHero);
     };
+    
     int eatThis(Tyrant tyrant, int numMissiles);
     Tyrant t002;
 };
@@ -101,8 +105,10 @@ struct GreatFox
         bool twinBlasters;
         int numBombs = 3;
     };
+
     int plotCourse = 2;
     void supportArwing(ArWing arWing, bool dropSupplies);
+    
     ArWing fox;
     ArWing peppy;
     ArWing falco;
@@ -117,7 +123,9 @@ struct SpaceshipFactory
     {
         int selectForceModule = 2;
     };
+
     void launchFighters(SpaceFighter spaceFighter, int amountOfShips);
+    
     SpaceFighter arrowHead;
 };
 
@@ -128,8 +136,7 @@ struct AlienEmpire
 {
     unsigned int numWorldsConquered = 8;
     int bydoWarships = 5000;
-    float amountOfFeetSidescrolled= 43284.3f;
-    
+    float amountOfFeetSidescrolled= 43284.3f;  
 };
 
 
@@ -150,15 +157,19 @@ struct Sewers
     {
         bool karateMaster = true;
     };
+
     struct Turtle
     {
         float numPizzaSlicesEaten = 3.5;
     };
+
     void createNinjaTurtle(Turtle turtle, Ooze ooze, double amountOoze);
+    
     Turtle leonardo;
     Turtle donatello;
     Turtle Michelangelo;
     Turtle Raphael;
+    
     Rat masterSplinter;
 };
 /*
@@ -182,10 +193,12 @@ struct ManaTree
 {
     bool allFormsOfLifeCreated = true;
     unsigned int numYearsOld = 70000;
+    
     struct ManaArtifact
     {
         float enchantmentEnergy = 700.3f;
     };
+    
     ManaArtifact swordOfMana;
 };
 /*
@@ -199,8 +212,10 @@ struct SkyNet
         bool yourBoots;
         bool yourClothes;
         bool yourMotorcycle;
+
         void haveYouSeenThisBoy();
     };  
+    
     TimeTravelingTerminator t1000;
 };
 /*
@@ -212,6 +227,7 @@ struct AnotherCastle
     {
         bool isInAnotherCastle = true;
     };
+    
     Princess peach;
 };
 
