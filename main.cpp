@@ -65,6 +65,7 @@ struct VampireCastle
     {
         bool hasMorningStar = true;
         unsigned int numUndeadSlain = 348;
+        void swingWhip(int directionOfSwing);
     };
     
     void curseVampireHunter( VampireHunter vampireHunter );
@@ -104,6 +105,7 @@ struct GreatFox
     {
         bool twinBlasters;
         int numBombs = 3;
+        void doABarrelRoll(bool left);
     };
 
     int plotCourse = 2;
@@ -164,6 +166,7 @@ struct Sewers
     {
         bool toxicWaste = true;
         bool mutagen = true;
+        void contaminate(int selectWaterSupply);
     };
 
     struct Rat
@@ -214,7 +217,7 @@ struct ManaTree
     struct ManaArtifact
     {
         float enchantmentEnergy = 700.3f;
-
+        void advanceThePlot(bool inHeroPossession);
     };
 
     struct MainCharacter
@@ -267,6 +270,7 @@ struct AnotherCastle
     {
         bool isInAnotherCastle = true;
         unsigned int numTimesAbducted = 25;
+        void useStarPower();
     };
     Princess peach;
 };
