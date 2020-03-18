@@ -122,6 +122,8 @@ struct SpaceshipFactory
     struct SpaceFighter
     {
         int selectForceModule = 2;
+        void ejectModule();
+        void attachModule(bool onFrontOfShip);
     };
 
     void launchFighters(SpaceFighter spaceFighter, int amountOfShips);
@@ -137,6 +139,17 @@ struct AlienEmpire
     unsigned int numWorldsConquered = 8;
     int bydoWarships = 5000;
     float amountOfFeetSidescrolled= 43284.3f;  
+
+    struct Boss
+    {
+        unsigned int numHumansBlownUp = 300;
+        float storedEnergy = 90.f;
+        void specialAttack(int storedEnergy);
+    };
+
+    void createBulletHell(Boss boss, int numMinions);
+
+    Boss bydoCommander;
 };
 
 
@@ -156,11 +169,13 @@ struct Sewers
     struct Rat
     {
         bool karateMaster = true;
+        int longWindedLecture(int topic, int length);
     };
 
     struct Turtle
     {
         float numPizzaSlicesEaten = 3.5;
+        void eatPizza(int numSlices);
     };
 
     void createNinjaTurtle(Turtle turtle, Ooze ooze, double amountOoze);
@@ -182,6 +197,7 @@ struct TechnoDrome
         int numTonfaNinja = 1000;
         int numSwordNinja = 300;
         int numStaffNinja = 500;
+        void beDefeated(bool thrownOffScreen);
     };
 
     NinjaGang footClan;
@@ -193,11 +209,29 @@ struct ManaTree
 {
     bool allFormsOfLifeCreated = true;
     unsigned int numYearsOld = 70000;
+
     
     struct ManaArtifact
     {
         float enchantmentEnergy = 700.3f;
+
     };
+
+    struct MainCharacter
+    {
+        int magicPoints = 60;
+        float experiencePoints = 1000.f;
+        int attack = 15;
+        int defence = 12;
+        int magic = 13;
+
+        void castSpell(int magicPointsUsed, int spellChoice);
+    };
+
+    int chooseSuccessor(MainCharacter mainCharacter, bool heroOrHeroine);
+    
+
+    MainCharacter heroine;
     
     ManaArtifact swordOfMana;
 };
@@ -206,30 +240,38 @@ struct ManaTree
  */
 struct SkyNet 
 {
+
+    unsigned int enslaveHumanity(int numMajorCities);
+
     struct TimeTravelingTerminator
     {
         int numBullets;
         bool yourBoots;
         bool yourClothes;
         bool yourMotorcycle;
-
-        void haveYouSeenThisBoy();
+        void haveYouSeenThisBoy(bool recognizePolaroidPhoto);
     };  
-    
     TimeTravelingTerminator t1000;
 };
+
+    
 /*
  10)
  */
 struct AnotherCastle
 {
+
+    void demolishCastle(bool italianPlumberPresent, int numSticksOfDynamite);
+
     struct Princess
     {
         bool isInAnotherCastle = true;
+        unsigned int numTimesAbducted = 25;
     };
-    
     Princess peach;
 };
+
+    
 
 #include <iostream>
 int main()
